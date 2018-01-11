@@ -1,0 +1,39 @@
+# Chinese (Traditional, Taiwan) translations for ckanext-wikidatakeyword.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the
+# ckanext-wikidatakeyword
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-wikidatakeyword 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-01-10 16:54+0800\n"
+"PO-Revision-Date: 2018-01-09 11:54+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh_Hant_TW\n"
+"Language-Team: zh_Hant_TW <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/wikidatakeyword/plugin.py:52
+#: ckanext/wikidatakeyword/templates/wikidatakeyword/snippets/wikidatakeyword_list.html:12
+msgid "Keywords"
+msgstr "關鍵字"
+
+#: ckanext/wikidatakeyword/validators.py:26
+msgid "expecting list of strings"
+msgstr "必須是字串列表"
+
+#: ckanext/wikidatakeyword/templates/snippets/search_form.html:16
+msgid "Remove"
+msgstr "移除"
+
+#: ckanext/wikidatakeyword/templates/snippets/search_form.html:21
+msgid "Filter Results"
+msgstr "篩選結果"
+

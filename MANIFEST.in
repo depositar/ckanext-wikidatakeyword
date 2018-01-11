@@ -1,0 +1,4 @@
+nclude LICENSE.txt
+recursive-include ckanext *.html *.json
+recursive-include ckanext/wikidatakeyword/fanstatic *
+recursive-include ckanext/wikidatakeyword/i18n *

@@ -1,0 +1,15 @@
+{
+  "scheming_presets_version": 1,
+  "about": "scheming presets for wikidata keyword field",
+  "about_url": "http://github.com/depositar-io/ckanext-wikidatakeyword",
+  "presets": [
+    {
+      "preset_name": "wikidata_keyword",
+      "values": {
+        "form_snippet": "wikidata_keyword.html",
+        "validators": "wikidata_keyword",
+        "output_validators": "wikidata_keyword_output"
+      }
+    }
+  ]
+}
