@@ -1,43 +1,13 @@
 /* Search and fill in wikidata entries as keywords
 */
-this.ckan.module('input-wikidata', function ($, _) {   
+this.ckan.module('input-wikidata', function (jQuery) {
   return {
     options: {
-      language: $('html').attr('lang').replace('_', '-').toLowerCase(),
-      i18n: {
-        noMatches: _('No matches found'),
-        inputTooShort: function (data) {
-          return _('Input is too short, must be at least one character')
-          .ifPlural(data.min, 'Input is too short, must be at least %(min)d characters');
-        },
-        formatSearching: _('Searching…'),
-        label: _('Label'),
-        description: _('Description')
-      }
+      language: $('html').attr('lang').replace('_', '-').toLowerCase()
     },
     initialize: function () {
       $.proxyAll(this, /ajaxData/, /initSelection/, /format/, /results/);
-      if ($('html').attr('lang') == 'zh_TW') {
-        locale_data = ckan.i18n.options.locale_data.ckan;
-        $.extend(locale_data, this.getLocale());
-      }
       this.setupInputWikidata();
-    },
-    getLocale: function () {
-      return {
-        'Searching…': [
-          null,
-          '搜尋中...'
-        ],
-        'Label': [
-          null,
-          '標籤'
-        ],
-        'Description': [
-          null,
-          '描述'
-        ]
-      };
     },
     setupInputWikidata: function () {
       var settings = {
@@ -75,8 +45,8 @@ this.ckan.module('input-wikidata', function ($, _) {
       return {
         results: (data.search.length > 0 ? [{
           id: 'ID',
-          label: this.i18n('label'),
-          description: this.i18n('description'),
+          label: this._('Label'),
+          description: this._('Description'),
           children: data.search,
           disabled: true
         }] : data.search)
@@ -110,13 +80,13 @@ this.ckan.module('input-wikidata', function ($, _) {
       return markup;
     },
     formatNoMatches: function (term) {
-      return !term ? this.i18n('emptySearch') : this.i18n('noMatches');
+      return !term ? this._('emptySearch') : this._('No matches found');
     },
     formatInputTooShort: function (term, min) {
-      return this.i18n('inputTooShort', {min: min});      
+      return this._('Start typing…');
     },
     formatSearching: function () {
-      return this.i18n('formatSearching');
+      return this._('Searching…');
     },
     formatSelection: function (element) {
       return element.text || element.label;
