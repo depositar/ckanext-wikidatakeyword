@@ -80,7 +80,7 @@ this.ckan.module('input-wikidata', function (jQuery) {
       return markup;
     },
     formatNoMatches: function (term) {
-      return !term ? this._('emptySearch') : this._('No matches found');
+      return !term ? this._('Start typing…') : this._('No matches found');
     },
     formatInputTooShort: function (term, min) {
       return this._('Start typing…');
