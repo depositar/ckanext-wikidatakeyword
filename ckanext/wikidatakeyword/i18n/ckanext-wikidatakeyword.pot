@@ -7,9 +7,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: ckanext-wikidatakeyword 0.0.1\n"
+"Project-Id-Version: ckanext-wikidatakeyword 0.0.1b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-01-10 16:54+0800\n"
+"POT-Creation-Date: 2018-07-18 15:10+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,27 @@ msgstr ""
 
 #: ckanext/wikidatakeyword/validators.py:26
 msgid "expecting list of strings"
+msgstr ""
+
+#: ckanext/wikidatakeyword/fanstatic/scripts/modules/input-wikidata.js:48
+msgid "Label"
+msgstr ""
+
+#: ckanext/wikidatakeyword/fanstatic/scripts/modules/input-wikidata.js:49
+msgid "Description"
+msgstr ""
+
+#: ckanext/wikidatakeyword/fanstatic/scripts/modules/input-wikidata.js:83
+#: ckanext/wikidatakeyword/fanstatic/scripts/modules/input-wikidata.js:86
+msgid "Start typing…"
+msgstr ""
+
+#: ckanext/wikidatakeyword/fanstatic/scripts/modules/input-wikidata.js:83
+msgid "No matches found"
+msgstr ""
+
+#: ckanext/wikidatakeyword/fanstatic/scripts/modules/input-wikidata.js:89
+msgid "Searching…"
 msgstr ""
 
 #: ckanext/wikidatakeyword/templates/snippets/search_form.html:16
