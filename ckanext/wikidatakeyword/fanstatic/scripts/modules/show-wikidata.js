@@ -10,15 +10,16 @@ this.ckan.module('show-wikidata', function ($, _) {
     },
     initialize: function() {
       $.proxyAll(this, /_on/);
-      this.search_wikidata(this.options.nav_item_labels, split=true);
+      this.search_wikidata(this.options.nav_item_labels);
       this.search_wikidata(this.options.filter_labels);
       this.search_wikidata(this.options.labels);
     },
-    search_wikidata: function(labels, split=false) {
+    search_wikidata: function(labels) {
       var language = this.options.language;
       $(labels).each(function (i, l) {
         var label = $(l).text();
-        if (split) {
+        // For CKAN <= 2.7
+        if (!$(l).attr('class')) {
           var split_label = label.match(/[A-Za-z0-9]+/g);
           label = split_label[0];
         }
@@ -30,7 +31,8 @@ this.ckan.module('show-wikidata', function ($, _) {
             $.each(entities.entities, function() {
               var new_label = this.labels[language] || this.labels['zh-hant'] || this.labels.zh || this.labels.en;
               new_label = new_label.value;
-              if (split) {
+              // For CKAN <= 2.7
+              if (!$(l).attr('class')) {
                 new_label = new_label + ' (' + split_label[1] + ')';
               }
               if($(l).is('span')) { 
