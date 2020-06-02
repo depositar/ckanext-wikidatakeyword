@@ -49,6 +49,6 @@ class WikidatakeywordPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
 
 def _add_facets(facets_dict):
-    facets_dict['keywords_facet'] = plugins.toolkit._('Keywords')
+    facets_dict['keywords_facet'] = plugins.toolkit._('Wikidata Keywords')
 
     return facets_dict

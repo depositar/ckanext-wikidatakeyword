@@ -4,7 +4,7 @@ ckanext-wikidatakeyword
 
 This extension adds Wikidata-powered keyword field in CKAN datasets.
 
-This new extra field "keywords" will appear in the
+This new extra field "Wikidata Keywords" will appear in the
 dataset form by the `form snippet`_.
 
 .. image:: docs/keywords-form.png
@@ -55,7 +55,7 @@ To install ckanext-wikidatakeyword:
 
     {
       "field_name": "keywords",
-      "label": "Keywords",
+      "label": "Wikidata Keywords",
       "preset": "wikidata_keyword"
     }
 
