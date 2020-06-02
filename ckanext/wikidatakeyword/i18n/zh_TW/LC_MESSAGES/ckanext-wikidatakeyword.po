@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-wikidatakeyword 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-18 15:10+0800\n"
+"POT-Creation-Date: 2020-06-02 09:49+0800\n"
 "PO-Revision-Date: 2018-01-09 11:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant_TW\n"
@@ -22,8 +22,8 @@ msgstr ""
 
 #: ckanext/wikidatakeyword/plugin.py:52
 #: ckanext/wikidatakeyword/templates/wikidatakeyword/snippets/wikidatakeyword_list.html:12
-msgid "Keywords"
-msgstr "關鍵字"
+msgid "Wikidata Keywords"
+msgstr "Wikidata 關鍵字"
 
 #: ckanext/wikidatakeyword/validators.py:26
 msgid "expecting list of strings"
@@ -57,4 +57,3 @@ msgstr "移除"
 #: ckanext/wikidatakeyword/templates/snippets/search_form.html:21
 msgid "Filter Results"
 msgstr "篩選結果"
-
