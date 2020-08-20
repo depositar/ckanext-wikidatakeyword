@@ -17,6 +17,7 @@
       style="display: block"
       id="field-{{ field.field_name }}"
       name="{{ field.field_name }}"
+      placeholder="{{ _('Add Wikidata items to describe the dataset...') }}"
       data-selected="{{ h.dump_json(data.get(field.field_name, [])) }}"
       data-module="input-wikidata" }}
   >
