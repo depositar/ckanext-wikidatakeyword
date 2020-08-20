@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-wikidatakeyword 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-02 09:49+0800\n"
+"POT-Creation-Date: 2020-08-20 11:11+0800\n"
 "PO-Revision-Date: 2018-01-09 11:54+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh_Hant_TW\n"
@@ -50,6 +50,10 @@ msgstr "沒有匹配的資料"
 msgid "Searching…"
 msgstr "搜尋中..."
 
+#: ckanext/wikidatakeyword/templates/scheming/form_snippets/wikidata_keyword.html:20
+msgid "Add Wikidata items to describe the dataset..."
+msgstr "加入維基資料項目以描述資料集..."
+
 #: ckanext/wikidatakeyword/templates/snippets/search_form.html:16
 msgid "Remove"
 msgstr "移除"
@@ -57,3 +61,4 @@ msgstr "移除"
 #: ckanext/wikidatakeyword/templates/snippets/search_form.html:21
 msgid "Filter Results"
 msgstr "篩選結果"
+

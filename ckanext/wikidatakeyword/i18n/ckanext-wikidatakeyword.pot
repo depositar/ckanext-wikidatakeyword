@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-wikidatakeyword 0.0.1b0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2020-06-02 09:49+0800\n"
+"POT-Creation-Date: 2020-08-20 11:11+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,6 +46,10 @@ msgstr ""
 
 #: ckanext/wikidatakeyword/fanstatic/scripts/modules/input-wikidata.js:89
 msgid "Searching…"
+msgstr ""
+
+#: ckanext/wikidatakeyword/templates/scheming/form_snippets/wikidata_keyword.html:20
+msgid "Add Wikidata items to describe the dataset..."
 msgstr ""
 
 #: ckanext/wikidatakeyword/templates/snippets/search_form.html:16
