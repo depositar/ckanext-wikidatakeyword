@@ -25,10 +25,13 @@ def wikidata_keyword(key, data, errors, context):
         if not isinstance(value, list):
             errors[key].append(_('expecting list of strings'))
             return
+    else:
+        value = []
 
-        if not errors[key]:
-            data[key] = json.dumps(value)
-        return
+    if not errors[key]:
+        data[key] = json.dumps(value)
+
+    return
 
 
 def wikidata_keyword_output(value):
