@@ -32,12 +32,11 @@ To install ckanext-wikidatakeyword:
 
 2. Install the ckanext-wikidatakeyword Python package into your virtual environment::
 
-    pip install -e 'git+https://github.com/depositar-io/ckanext-wikidatakeyword.git#egg=ckanext-wikidatakeyword'
+    pip install -e 'git+https://github.com/depositar/ckanext-wikidatakeyword.git#egg=ckanext-wikidatakeyword'
 
 3. Install Python dependencies::
 
     pip install -r /usr/lib/ckan/default/src/ckanext-wikidatakeyword/requirements.txt
-    pip install -r /usr/lib/ckan/default/src/ckanext-scheming/requirements.txt
 
 4. Add ``wikidatakeyword`` and ``scheming_datasets`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at
@@ -50,14 +49,12 @@ To install ckanext-wikidatakeyword:
                        ckanext.wikidatakeyword:presets.json
 
 6. A keyword field in a scheming schema will look something like
-   (``/usr/lib/ckan/default/src/ckanext-scheming/ckanext/scheming/ckan_dataset.json`` if
+   (``/usr/lib/ckan/default/src/ckanext-scheming/ckanext/scheming/ckan_dataset.yaml`` if
    you are not using a custom extension)::
 
-    {
-      "field_name": "keywords",
-      "label": "Wikidata Keywords",
-      "preset": "wikidata_keyword"
-    }
+   - field_name: keywords
+     label: Wikidata Keywords
+     preset: wikidata_keyword
 
 7. Add a file ``templates/scheming/package/read.html`` in your custom extension
    (or modify ``/usr/lib/ckan/default/src/ckanext-scheming/ckanext/scheming/templates/scheming/package/read.html`` if
