@@ -1,0 +1,22 @@
+input-js:
+  output: wikidatakeyword/%(version)s_input.js
+  contents:
+    - scripts/modules/input-wikidata.js
+  extra:
+    preload:
+      - base/main
+      - wikidatakeyword/wd-js
+
+show-js:
+  output: wikidatakeyword/%(version)s_show.js
+  contents:
+    - scripts/modules/show-wikidata.js
+  extra:
+    preload:
+      - base/main
+      - wikidatakeyword/wd-js
+
+wd-js:
+  output: wikidatakeyword/%(version)s_wd.js
+  contents:
+    - scripts/vendor/wikidata-sdk/wikidata-sdk.js
