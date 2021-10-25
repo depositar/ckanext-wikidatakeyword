@@ -6,10 +6,14 @@ this.ckan.module('show-wikidata', function ($, _) {
       labels: $('#wikidata_labels ul li'),
       filter_labels: $('.filtered'),
       nav_item_labels: $('div[data-module="show-wikidata"] .nav-item a span'),
-      language: $('html').attr('lang').replace('_', '-').toLowerCase(),
+      language: $('html').attr('lang').replaceAll('_', '-').toLowerCase(),
     },
     initialize: function() {
       $.proxyAll(this, /_on/);
+      // zh-tw hack
+      if(this.options.language == 'zh-hant-tw') {
+        this.options.language = 'zh-tw';
+      }
       this.search_wikidata(this.options.nav_item_labels);
       this.search_wikidata(this.options.filter_labels);
       this.search_wikidata(this.options.labels);

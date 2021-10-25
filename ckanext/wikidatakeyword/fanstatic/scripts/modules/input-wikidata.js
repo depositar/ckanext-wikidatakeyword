@@ -3,10 +3,14 @@
 this.ckan.module('input-wikidata', function (jQuery) {
   return {
     options: {
-      language: $('html').attr('lang').replace('_', '-').toLowerCase()
+      language: $('html').attr('lang').replaceAll('_', '-').toLowerCase()
     },
     initialize: function () {
       $.proxyAll(this, /ajaxData/, /initSelection/, /format/, /results/);
+      // zh-tw hack
+      if(this.options.language == 'zh-hant-tw') {
+        this.options.language = 'zh-tw';
+      }
       this.setupInputWikidata();
     },
     setupInputWikidata: function () {
@@ -71,12 +75,11 @@ this.ckan.module('input-wikidata', function (jQuery) {
       }
     },
     formatResult: function (entity, container, query) {
-      var markup = '<div class="row-fluid">' +
-        '<div class="span2">' + entity.id + '</div>' +
-        '<div class="span9">' + '<div class="row-fluid">' +
-        '<div class="span3">' + entity.label + '</div>' +
-        '<div class="span6">' + (entity.description || '') + '</div>' +
-        '</div></div></div>';
+      var markup = '<div class="row">' +
+        '<div class="col-sm-2 col-lg-2">' + entity.id + '</div>' +
+        '<div class="col-sm-3 col-lg-3">' + entity.label + '</div>' +
+        '<div class="col-sm-6 col-lg-6">' + (entity.description || '') + '</div>' +
+        '</div>';
       return markup;
     },
     formatNoMatches: function (term) {

@@ -18,7 +18,7 @@ When displayed, each keyword will appear by the
 Requirements
 ------------
 
-This extension is only tested in CKAN 2.7 and later with ckanext-scheming installed.
+This extension is only tested in CKAN 2.9 and later with ckanext-scheming installed.
 
 ------------
 Installation

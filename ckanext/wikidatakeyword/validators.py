@@ -18,7 +18,7 @@ def wikidata_keyword(key, data, errors, context):
 
     value = data[key]
     if value is not missing:
-        if isinstance(data[key], basestring):
+        if isinstance(data[key], str):
             value = [element.strip()
                      for element in value.split(',')
                      if element.strip()]
