@@ -40,7 +40,7 @@ To install ckanext-wikidatakeyword:
 
 4. Add ``wikidatakeyword`` and ``scheming_datasets`` to the ``ckan.plugins`` setting in your CKAN
    config file (by default the config file is located at
-   ``/etc/ckan/default/production.ini``).
+   ``/etc/ckan/default/ckan.ini``).
 
 5. Add ``ckanext.wikidatakeyword:presets.json`` to your scheming.presets
    configuration settings::
