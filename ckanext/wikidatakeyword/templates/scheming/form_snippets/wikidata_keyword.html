@@ -4,6 +4,12 @@
   {%- snippet 'scheming/form_snippets/help_text.html', field=field -%}
 {% endmacro %}
 
+{# hack to ensure that the value is a list #}
+{% set selected = data.get(field.field_name) %}
+{% if selected is string %}
+  {% set selected = selected.split(',') %}
+{% endif %}
+
 {%- call form.input_block(
     'field-' + field.field_name,
     label=h.scheming_language_text(field.label),
@@ -18,7 +24,7 @@
       id="field-{{ field.field_name }}"
       name="{{ field.field_name }}"
       placeholder="{{ _('Add Wikidata items to describe the dataset...') }}"
-      data-selected="{{ h.dump_json(data.get(field.field_name)) }}"
+      data-selected="{{ h.dump_json(selected) }}"
       data-module="input-wikidata" }}
   >
   </input>
