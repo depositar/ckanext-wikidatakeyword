@@ -28,8 +28,12 @@ class WikidatakeywordPlugin(plugins.SingletonPlugin, DefaultTranslation):
     # CKAN >= 2.10
     def before_dataset_index(self, data_dict):
         value = data_dict.get('keywords', [])
-        if value:
+        if isinstance(value, str):
             data_dict['keywords_facet'] = json.loads(value)
+        # Hacky hacks to resolve ckan/ckan#7926
+        if isinstance(value, list):
+            data_dict['keywords'] = json.dumps(value)
+            data_dict['keywords_facet'] = value
 
         return data_dict
 
