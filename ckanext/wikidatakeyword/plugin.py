@@ -21,7 +21,12 @@ class WikidatakeywordPlugin(plugins.SingletonPlugin, DefaultTranslation):
 
     # IPackageController
 
+    # CKAN < 2.10
     def before_index(self, data_dict):
+        return self.before_dataset_index(data_dict)
+
+    # CKAN >= 2.10
+    def before_dataset_index(self, data_dict):
         value = data_dict.get('keywords', [])
         if value:
             data_dict['keywords_facet'] = json.loads(value)
