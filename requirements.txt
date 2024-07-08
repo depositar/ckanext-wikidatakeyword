@@ -1,1 +1,1 @@
--e git+git://github.com/ckan/ckanext-scheming.git@release-2.1.0#egg=ckanext-scheming
+ckanext-scheming==3.0.0
